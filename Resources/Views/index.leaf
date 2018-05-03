@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    #embed("head")
+  </head>
+  <body>
+
+      
+   #embed("scripts")
+  </body>
+</html>
