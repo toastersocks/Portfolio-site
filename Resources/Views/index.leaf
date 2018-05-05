@@ -1,11 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    #embed("head")
-  </head>
-  <body>
 
-      
-   #embed("scripts")
-  </body>
+<head>
+    #embed("head")
+</head>
+
+<body>
+    <div class="container">
+        <h1>James Pamplona</h1>
+        <div class="row">
+            <div id="about col">
+                <h2>#(about.title)</h2>
+
+                <p>#(about.content)</p>
+
+            </div>
+            <div class="w-100"></div>
+            <div id="projects" class="col">
+                <h2>#(projects.title)</h2>
+                <div class="projects-list row">
+                    #for(project in projects.projects) {
+                    <div class="project-container col-sm">
+                        <img>
+                        <h5>#(project.name)</h5>
+                        </img>
+                        <p>#(project.description)</p>
+
+                    </div>
+                    }
+                </div>
+
+            </div>
+            <div id="skills">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    #for(skill in skills.skills) {
+                    <li>#(skill)</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    #embed("scripts")
+</body>
+
 </html>

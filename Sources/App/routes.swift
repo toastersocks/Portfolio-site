@@ -30,7 +30,24 @@ public func routes(_ router: Router) throws {
 
     router.get() { (req) -> Future<View> in
         let leaf = try req.make(LeafRenderer.self)
-        return try leaf.render("index", MainSite(about: AboutSection(title: "About", content: <#T##String#>), projects: <#T##ProjectsSection#>, skills: <#T##SkillsSection#>))
+        return leaf.render("index", MainSite(about: AboutSection(title: "About", content: """
+            I am passionate about serving and enabling people. Everyone has a story to tell and a unique perspective that can be learned from.
+            I also enjoy software development and design for mobile platforms in my spare time. I'm interested in issues of accessibility/color blindness and dyslexia and how they affect and inform human-computer interaction. I'm also interested in culture and language/translation issues as pertaining to products and software.
+            I enjoy thinking about ways in which computers can enhance our lives, rather than distract us.
+            
+""")
+            , projects: ProjectsSection(title: "Projects", projects: [
+                Project(id: nil, name: "Be - Digital Fasting Mindfulness", description: """
+Be is a mindfulness app that helps you to disconnect from the distraction of screens and to just be with yourself by practicing what's known as "digital fasting."
+
+- Track your progress from within the app
+
+- Achieve your mindfulness goals by scheduling one-time or repeating reminders to help you stay on track
+
+- Integrate with HealthKit so you can see your mindfulness minutes alongside your other health data
+""", image: nil, url: nil),
+                Project(id: nil, name: "Ratios - iOS/Android", description: "An app for iPhone & Android that helps users calculate THC/CBD ratios for pain/anxiety relief.", image: nil, url: nil)]),
+              skills: SkillsSection(title: "Skills", skills: ["Skill1", "Skill2", "Skill3"])))
     }
     
     // Example of configuring a controller
