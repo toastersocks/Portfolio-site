@@ -1,6 +1,7 @@
 import FluentSQLite
 import Vapor
 import Leaf
+import LeafMarkdown
 
 /// Called before your application initializes.
 ///
@@ -13,6 +14,9 @@ public func configure(
     /// Register providers first
     try services.register(FluentSQLiteProvider())
     try services.register(LeafProvider())
+    var tags = LeafTagConfig.default()
+    tags.use(Markdown(), as: "markdown")
+    services.register(tags)
 
     /// Register routes to the router
     let router = EngineRouter.default()
@@ -22,7 +26,6 @@ public func configure(
     /// Register middleware
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
     /// middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
-    middlewares.use(DateMiddleware.self) // Adds `Date` header to responses
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
     services.register(middlewares)
 
