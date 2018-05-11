@@ -20,18 +20,21 @@
                 <h2>#(projects.title)</h2>
                 <div class="projects-list row">
                     #for(project in projects.projects) {
-                    <div class="project-container col-sm">
-                        <img>
-                        <h5>#(project.name)</h5>
-                        </img>
-                        <p>#(project.description)</p>
-
+                    <div class="project-container col-sm card">
+                        <img class="card-image-top" src="be.png">
+                        <div class="card-header">
+                            <h5 class="card-title">#(project.name)</h5>
+                            </img>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">#markdown(project.description)</p>
+                        </div>
                     </div>
                     }
                 </div>
 
             </div>
-            <div id="skills">
+            <div id="skills" class="col-sm-4">
                 <h2>Skills</h2>
                 <ul class="skills-list">
                     #for(skill in skills.skills) {

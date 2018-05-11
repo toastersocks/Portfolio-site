@@ -46,8 +46,19 @@ Be is a mindfulness app that helps you to disconnect from the distraction of scr
 
 - Integrate with HealthKit so you can see your mindfulness minutes alongside your other health data
 """, image: nil, url: nil),
-                Project(id: nil, name: "Ratios - iOS/Android", description: "An app for iPhone & Android that helps users calculate THC/CBD ratios for pain/anxiety relief.", image: nil, url: nil)]),
-              skills: SkillsSection(title: "Skills", skills: ["Skill1", "Skill2", "Skill3"])))
+                Project(id: nil, name: "Ratios - iOS", description: "An app for iPhone that helps users calculate THC/CBD ratios for pain/anxiety relief.", image: nil, url: nil),
+                Project(id: nil, name: "Ratios - Android", description: "An app for Android that helps users calculate THC/CBD ratios for pain/anxiety relief.", image: nil, url: nil)]),
+              skills: SkillsSection(title: "Skills", skills: ["Collaborating with others on projects in person and online.",
+                                                              "Solo and collaborative work on software via Git version control system",
+                                                              "Application and framework development.",
+                                                              "Problem solving",
+                                                              "Weighing various cost/benefit trade-offs of different solutions/approaches to problems.",
+                                                              "In-depth knowledge of CocoaTouch frameworks.",
+               " Dependency management solutions including Cocoapods, Carthage, Swift Package Manager and manual dependency management",
+                "Testing and test-driven development using XCTest, Quick/Nimble, and SwiftCheck property-based testing.",
+                "Accessibility and Localization best practices.",
+                "Profiling program performance memory usage/leaks.",
+])))
     }
     
     // Example of configuring a controller
